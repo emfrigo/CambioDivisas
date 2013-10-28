@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stetic-interface>
+  <configuration>
+    <images-root-path>..</images-root-path>
+    <target-gtk-version>2.12</target-gtk-version>
+  </configuration>
+  <import>
+    <widget-library name="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <widget-library name="../bin/Debug/CambioDivisas.exe" internal="true" />
+  </import>
+  <widget class="Gtk.Window" id="MainWindow" design-size="278 314">
+    <property name="MemberName" />
+    <property name="Title" translatable="yes">Cambio de Divisas</property>
+    <property name="WindowPosition">Center</property>
+    <signal name="DeleteEvent" handler="OnDeleteEvent" />
+    <child>
+      <widget class="Gtk.Fixed" id="fixed1">
+        <property name="MemberName" />
+        <property name="HasWindow">False</property>
+        <child>
+          <widget class="Gtk.Entry" id="tCambio">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Text" translatable="yes">13.10</property>
+            <property name="IsEditable">False</property>
+            <property name="HasFrame">False</property>
+            <property name="InvisibleChar">●</property>
+          </widget>
+          <packing>
+            <property name="X">61</property>
+            <property name="Y">235</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="btnCambio">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label" translatable="yes">Cambiar</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="cambioClick" after="yes" />
+          </widget>
+          <packing>
+            <property name="X">106</property>
+            <property name="Y">157</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="label2">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">Dolares</property>
+          </widget>
+          <packing>
+            <property name="X">109</property>
+            <property name="Y">19</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Entry" id="txtPesos">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="IsEditable">True</property>
+            <property name="MaxLength">5</property>
+            <property name="InvisibleChar">●</property>
+            <property name="Xalign">0.5</property>
+          </widget>
+          <packing>
+            <property name="X">56</property>
+            <property name="Y">124</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Entry" id="txtDolares">
+            <property name="MemberName" />
+            <property name="Tooltip" translatable="yes">Ingrese cantidad en dolares</property>
+            <property name="CanFocus">True</property>
+            <property name="IsEditable">True</property>
+            <property name="MaxLength">5</property>
+            <property name="InvisibleChar">●</property>
+            <property name="Xalign">0.5</property>
+          </widget>
+          <packing>
+            <property name="X">50</property>
+            <property name="Y">43</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="label3">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">Pesos</property>
+          </widget>
+          <packing>
+            <property name="X">115</property>
+            <property name="Y">92</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+</stetic-interface>
